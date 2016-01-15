@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+array ${1:array-name}[${2:length}] ${3:array-elements} (${4:initial-value-list});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>array</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  	<scope>source.sas</scope>
+  	<description>create array</description>
+</snippet>

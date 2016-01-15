@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+proc sort data = ${1:dataset};
+	by ${2:variable(s)};
+run;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sort</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.sas</scope>
+    <description>create proc sort</description>
+</snippet>
