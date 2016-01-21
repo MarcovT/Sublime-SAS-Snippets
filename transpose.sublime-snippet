@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+proc transpose data=${1:dataset} out=${2:datasetout};
+	var ${3:variable(s)};
+	by ${4:variable(s)};
+	id ${5:variable(s)};
+	where ${6:variable(s)};
+run;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>transpose</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sas</scope>
+	<description>transpose datasets</description>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+proc sql noprint;
+    select  count(${2:variable}) into: ${3:globalvar} from ${4:dataset} where ${5:statement};
+	;
+quit;
+
+%put &${3:globalvar};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sqlglobalvar</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.sas</scope>
+    <description>create global var</description>
+</snippet>
