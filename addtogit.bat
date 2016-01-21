@@ -1,3 +1,4 @@
+@echo on
 :: add the remote repos as a shortcut to snip
 git remote add snip https://github.com/bobfourie/subsassnip
 
