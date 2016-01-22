@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+%MACRO ${1:macro-name} (${2:parameter(s)}=,${3:parameter(s)}=);
+ 
+%MEND ${1:macro-name};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>macro</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sas</scope>
+	<description>create a macro</description>
+</snippet>
