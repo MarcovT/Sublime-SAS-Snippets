@@ -1,6 +1,6 @@
 @echo on
 :: add the remote repos as a shortcut to snip
-git remote add snip https://github.com/bobfourie/subsassnip
+:: git remote add snip https://github.com/bobfourie/subsassnip
 
 :: Adds the files in the local repository and stages them for commit
 git add .

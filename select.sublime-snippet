@@ -3,7 +3,7 @@
 select (${1:select-expression});
 	when (${2:when-expression-1}) ${3:statement};
 	when (${4:when-expression-2}) ${5:statement};
-otherwise ${6:statement};>
+otherwise ${6:statement};
 end;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
