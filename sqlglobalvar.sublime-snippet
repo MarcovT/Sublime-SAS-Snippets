@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 proc sql noprint;
-    select  count(${2:variable}) into: ${3:globalvar} from ${4:dataset} where ${5:statement};
+    select  count(distinct ${2:variable}) into: ${3:globalvar} from ${4:dataset} where ${5:statement};
 	;
 quit;
 

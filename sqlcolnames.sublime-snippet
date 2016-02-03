@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+PROC SQL NOPRINT;
+    SELECT name
+    INTO :var_names SEPARATED BY ' '
+    FROM dictionary.columns
+    WHERE libname = "${1:Lib_Name}"
+    AND memname = "${2:dataset}"
+    AND type ^= "char"
+;
+QUIT;
+RUN;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sqlcolnames</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sas</scope>
+	<description>Create var containing all col names</description>
+</snippet>
