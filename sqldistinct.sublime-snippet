@@ -1,12 +1,15 @@
 <snippet>
 	<content><![CDATA[
-data ${1:dataset-new};
-	set ${2:dataset};
-run;
+PROC SQL;
+    SELECT distinct ${1:variable}
+    FROM ${2:Libary.Dataset}
+;
+QUIT;
+RUN;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>data</tabTrigger> -->
+	<tabTrigger>sqldistinct</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.sas</scope>
-	<description>create data step</description>
+	<description>create sql select distinct</description>
 </snippet>
