@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+%macro run_me(datasetname);
+proc contents data=&datasetname out=contents noprint; run;
+proc sql ;
+   select name into :varlist separated by ' '
+  from contents
+   ;
+%let n=&sqlobs;
+quit;
+
+%do i=1 %to &n ;
+    %let currentvar = %scan(&varlist,&i);
+
+PROC SQL;
+    SELECT distinct &currentvar
+    FROM &datasetname
+;
+QUIT;
+RUN;
+
+%end;
+%mend run_me;
+
+%run_me(${2:dataset});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>printdistinct</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.sas</scope>
+    <description>macro to list distinct values of dataset</description>
+</snippet>
