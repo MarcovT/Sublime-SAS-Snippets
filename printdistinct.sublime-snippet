@@ -1,8 +1,12 @@
 <snippet>
 	<content><![CDATA[
-%macro run_me(datasetname);
+*This macro combines all distinct values for each variable;
+%macro combine_distinct(datasetname);
+data final;
+    id = .;
+run;
 proc contents data=&datasetname out=contents noprint; run;
-proc sql ;
+proc sql noprint;
    select name into :varlist separated by ' '
   from contents
    ;
@@ -12,17 +16,32 @@ quit;
 %do i=1 %to &n ;
     %let currentvar = %scan(&varlist,&i);
 
-PROC SQL;
-    SELECT distinct &currentvar
-    FROM &datasetname
-;
+    PROC SQL noprint;
+        create table temp as
+        SELECT distinct &currentvar
+        FROM &datasetname
+    ;
+    QUIT;
+    RUN;
+
+    data temp;
+      set temp;
+      if not missing(of _all_);
+      id +1;
+    run;
+
+    data final;
+      merge temp final;
+      by id;
+    run;
+
 QUIT;
 RUN;
 
 %end;
-%mend run_me;
+%mend combine_distinct;
 
-%run_me(${2:dataset});
+%combine_distinct(${2:dataset});
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>printdistinct</tabTrigger>
