@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+PROC DATASETS LIB = ${1:library-name};
+	CONTENTS DATA =_all_; 
+	QUIT; 
+RUN;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>contentslib</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  	<scope>source.sas</scope>
+  	<description>create proc contents of library</description>
+</snippet>
