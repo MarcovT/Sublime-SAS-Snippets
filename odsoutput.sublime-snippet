@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+ods output ${1:CrossTabFreqs}${2:OneWayFreqs}=${3:datasetout};
+	proc freq data=${4:dataset};
+		tables ${5:var};
+	run;
+ods listing;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>odsoutput</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  	<scope>source.sas</scope>
+  	<description>create ods output freq table</description>
+</snippet>

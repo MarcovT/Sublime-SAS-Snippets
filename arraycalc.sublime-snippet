@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+${1:varname} = ${2:sum}${3:mean}${4:std}(of ${5:array_name}[*]);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>arraycalc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  	<scope>source.sas</scope>
+  	<description>calc on array</description>
+</snippet>
