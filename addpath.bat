@@ -1,1 +1,0 @@
-set PATH=%PATH%;C:\Users\Q821658\Programs\PortableGit\bin
