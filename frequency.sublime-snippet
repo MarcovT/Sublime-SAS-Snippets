@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-proc freq data=${1:dataset};
+proc freq data=${1:dataset} NOPRINT;
 	tables ${2:variable(s)} /out=${3:datasetout};
 	by ${4:variable(s)};
 run;

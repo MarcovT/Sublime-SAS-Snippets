@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-length dsid name_col 8.;
+length dsid colnum 8.;
 dsid=open("${1:datasetname}");
-name_col=varnum(dsid,"${2:varname}");
+colnum=varnum(dsid,"${2:varname}"); /* if colnum > 0 then exist */
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>varexist</tabTrigger>

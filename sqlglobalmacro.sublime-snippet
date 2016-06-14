@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+%MACRO ${1:macroname} (globalvar=,select=,from=,where=);
+ proc sql noprint;
+     select  &select into: &globalvar from &from where &where;
+ 	;
+ quit;
+ 
+ %put &&&globalvar;
+%MEND ${1:macroname};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sqlglobalmacro</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sas</scope>
+	<description>create a global var macro</description>
+</snippet>
