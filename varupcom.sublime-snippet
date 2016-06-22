@@ -8,6 +8,9 @@ data ${1:dataset-new} (keep = var:);
       v(i)=compress(upcase(v(i)));
     end;
   drop i;
+
+proc sort;
+    by var:;
 run;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
