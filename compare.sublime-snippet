@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+Proc compare base = ${1:dataset_base} compare = ${2:dataset_compare} out = ${3:dataset_out_compare} ${4:listall} ${5:outnoeq} ${6:outbase} ${7:outcomp} ${8:outdiff};
+Run;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>compare</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+  	<scope>source.sas</scope>
+  	<description>Electronic compare</description>
+</snippet>
